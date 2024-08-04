@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Cliente cliente = new Cliente("12345-678", "João");
-        Funcionario funcionario = new Funcionario("98765-432", "Maria", "3000");
+        Cliente cliente = new Cliente("12345-678", "Pedro");
+        Funcionario funcionario = new Funcionario("98765-432", "", "3000");
 
         while (true) {
             System.out.println("\nMenu:");
@@ -13,7 +13,8 @@ public class Main {
             System.out.println("2. Ver descrição do Funcionário");
             System.out.println("3. Adicionar Carro ao Cliente");
             System.out.println("4. Visualizar Carros do Cliente");
-            System.out.println("5. Sair");
+            System.out.println("5. Lavar Carros do Cliente");
+            System.out.println("6. Sair");
             System.out.print("Escolha uma opção: ");
             int opcao = scanner.nextInt();
             scanner.nextLine(); 
@@ -41,6 +42,9 @@ public class Main {
                     cliente.visualizarCarros();
                     break;
                 case 5:
+                    cliente.lavarCarros();
+                    break;
+                case 6:
                     System.out.println("Saindo do sistema");
                     scanner.close();
                     return;

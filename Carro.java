@@ -20,4 +20,8 @@ public class Carro {
     public int getportas() {
         return portas;
     }
+
+    public void lavar() {
+        System.out.println("O carro " + marca + " " + modelo + " foi lavado.");
+    }
 }

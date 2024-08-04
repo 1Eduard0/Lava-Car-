@@ -24,6 +24,16 @@ public class Cliente extends Pessoa {
         }
     }
 
+    public void lavarCarros() {
+        if (carros.isEmpty()) {
+            System.out.println("O cliente não possui carros para lavar.");
+        } else {
+            for (Carro carro : carros) {
+                carro.lavar();
+            }
+        }
+    }
+    
     @Override
     public void imprimirDescricao() {
         System.out.println("Cliente: " + getNome() + ", CEP: " + getCep());
